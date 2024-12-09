@@ -1,0 +1,25 @@
+/*
+Define variables  globales
+*/:root{
+    --primario: #E8FCCF;
+    -primarioOscuro: #134611;
+    --secundario: #96e072;
+    --secundarioOscuro: #3D8914;
+    --blanco:#FFF8E8;
+    --negro:#000;
+
+    --fuentePrincipal: "Ojuju", serif;
+}
+
+/*
+Se agrega para que se calculan automaticamente los tamaños de las cajas
+*/
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
