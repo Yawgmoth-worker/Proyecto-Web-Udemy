@@ -1,8 +1,8 @@
 /*
 Define variables  globales
 */:root{
-    --primario: #E8FCCF;
-    -primarioOscuro: #134611;
+    --primario: #dbf6ba;
+    --primarioOscuro: #134611;
     --secundario: #96e072;
     --secundarioOscuro: #3D8914;
     --blanco:#FFF8E8;
@@ -17,9 +17,86 @@ Se agrega para que se calculan automaticamente los tamaños de las cajas
 
 html {
     box-sizing: border-box;
+    font-size: 62.5%;/*se coloca para que 1rem sea 10px*/
+    height: 100%;
 }
 
 *, *:before, *:after{
     box-sizing: inherit;
 }
 
+/* Configuraciones globales*/
+body {
+    background-image: linear-gradient(to top, var(--primario), var(--secundario) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: var(--fuentePrincipal);
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color:var(--blanco);
+}
+
+a{
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin:0 auto;
+}
+
+h1,h2,h3{
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+/****************HEADER*****************/
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.header__logo{
+    margin: 3rem 0;
+}
+
+/****************Navegacion*****************/
+.navegacion{
+    background-image: linear-gradient(var(--primarioOscuro),var(--secundarioOscuro) 100%);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.navegacion__enlace{
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 3rem;
+}
+
+.navegacion__enlace--activo,
+.navegacion__enlace:hover{
+    color: var(--secundario);
+}
