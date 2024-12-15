@@ -172,17 +172,17 @@ h2 {
 /****************Nosotros*****************/
 .grid--nosotros{
     display: grid;
-    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    column-gap: 2rem;
 }
 .nosotros__texto{
     grid-row: 2 / 3;
-    margin: 0 auto;
+}
+.nosotros__texto p{
+    font-size: 1.4rem;
 }
 .nosotros__imagen{
     grid-row: 1 / 2;
-    margin: 0 auto;
-    background-image: url(../img/nosotros.jpg);
 }
 @media (min-width: 768px){
     .grid--nosotros{
@@ -192,28 +192,47 @@ h2 {
     .nosotros__texto{
         grid-row: 1 / 2;
         grid-column: 1 / 2;
+
     }
     .nosotros__imagen{
         grid-row: 1 / 2;
         grid-column: 2 / 3;
-
     }
 }
 /****************Iconos*****************/
 .grid--iconos{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows:1fr ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:1fr 1fr;
 }
-.iconos__imagen{
+@media(min-width: 768px){
+    .grid--iconos{
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+.icono{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.icono__imagen{
+    max-width: 100%;
+    height: auto;
+    margin-bottom: -1rem;
+}
+/*
+.icono__informacion{
+    text-align: center;
+}
+.icono__nombre{
 
 }
-.iconos__informacion{
-
-}
-.iconos__nombre{
-
-}
+*/
 
 /****************Footer*****************/
 .footer{
